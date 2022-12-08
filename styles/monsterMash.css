@@ -53,6 +53,7 @@ p {
 
 #head {
     height: 172px;
+    cursor: pointer;
 }
 
 .face {
@@ -64,12 +65,15 @@ p {
 
 #eyes {
     height: 79px;
+    cursor: pointer;
 }
 
 #nose {
     height: 86px;
+    cursor: pointer;
 }
 
 #mouth {
     height: 117px;
+    cursor: pointer;
 }

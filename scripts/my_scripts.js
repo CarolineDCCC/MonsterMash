@@ -1,7 +1,7 @@
 
 
 
-let headclix, eyeclix, noseclix, mouthclix = 0;
+let headclix = 0, eyeclix = 0, noseclix = 0, mouthclix = 0;
 
 let timer = null;
 let timer2 = null;
