@@ -76,3 +76,10 @@ $("#mouth").click(function() {
     }
 });
 
+let newP = $("<p>");
+newP.text("Make your own monster face by clicking on the picture.");
+
+$("body").append(newP);
+newP.addClass("addedP");
+newP.css("display", "block");
+
