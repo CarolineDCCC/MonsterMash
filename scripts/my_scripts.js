@@ -7,6 +7,9 @@ let timer = null;
 let timer2 = null;
 let timer3 = null;
 
+let thunderTimer = null;
+
+
 
 
 
@@ -19,17 +22,20 @@ timer = setInterval(lightning1Fade, 1000);
 
 let lightning2Fade = function(){
     $("#lightning2").fadeIn(500);
-    $("#lightning2").fadeOut(2000);
+    $("#lightning2").fadeOut(2500);
 };
 
-timer2 = setInterval(lightning2Fade, 2500);
+timer2 = setInterval(lightning2Fade, 2000);
+
+
 
 let lightning3Fade = function(){
-    $("#lightning3").fadeIn(3500);
-    $("#lightning3").fadeOut(750);
+    $("#lightning3").fadeIn(750);
+    $("#lightning3").fadeOut(1500);
+    
 };
 
-timer3 = setInterval(lightning3Fade, 1000);
+timer3 = setInterval(lightning3Fade, 1500);
 
 
 $("#head").click(function() {
@@ -82,4 +88,46 @@ newP.text("Make your own monster face by clicking on the picture.");
 $("body").append(newP);
 newP.addClass("addedP");
 newP.css("display", "block");
+
+const myAudio = document.createElement('audio');
+
+let playThunder = function() {
+
+if (myAudio.canPlayType('audio/mpeg')) {
+  myAudio.setAttribute('src','thunder-25689.mp3');
+}
+
+myAudio.currentTime = 5;
+myAudio.play();
+myAudio.loop = true;
+
+};
+
+const thunder2Audio = document.createElement('audio');
+
+let playThunder2 = function() {
+
+if (thunder2Audio.canPlayType('audio/mpeg')) {
+  thunder2Audio.setAttribute('src','thunder-124463.mp3');
+}
+
+thunder2Audio.currentTime = 3;
+thunder2Audio.play();
+thunder2Audio.loop = true;
+
+};
+
+$("body").one("click", function() {
+    playThunder();
+
+  playThunder2();
+
+ 
+});
+
+
+
+
+
+
 
